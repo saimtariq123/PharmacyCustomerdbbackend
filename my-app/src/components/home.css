@@ -1,0 +1,22 @@
+.scroll-container {
+    height: 100vh; 
+    overflow-y: auto;
+   
+   
+    box-sizing: border-box;
+    background-color: #f5f5f5; 
+    border: 1px solid #ddd; 
+  }
+  .search{
+    padding: 15px 0;
+    border-radius: 15px;
+    background: #0c0c19;
+  }
+  
+  .content {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    
+  }
+  

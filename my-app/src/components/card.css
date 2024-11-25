@@ -1,0 +1,87 @@
+/* Card container for layout */
+.card-container {
+  display: inline-block;
+  width: 20%; /* Each card takes up 20% width */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* Card styling */
+.card {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+/* Card image */
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.5s ease; /* Smooth zoom effect */
+}
+
+/* Hover overlay for button */
+.card-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease;
+}
+
+.card:hover .card-hover-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.card:hover .card-img {
+  transform: scale(1.1); /* Zoom in image */
+}
+
+/* Button styling */
+.btn {
+  background-color: #0c0c19;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #1d4ed8; /* Change color on hover */
+}
+
+/* Description and price */
+.card-info {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.card-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #1d4ed8;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}

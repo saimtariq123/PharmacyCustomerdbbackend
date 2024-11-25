@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Protest+Revolution&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensures full viewport height */
+  margin: 0;
+background: url(./images/Screenshot\ 2024-11-17\ 000955.png) no-repeat center center;  
+
+  background-size: cover; /* Makes sure the image covers the entire screen */
+  overflow: hidden; /* Prevents scrolling issues */
+}
+
+
+
