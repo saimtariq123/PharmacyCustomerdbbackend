@@ -4,7 +4,7 @@ import { MdOutlineSearch } from "react-icons/md";
 
 const search = () => {
   return (
-    <div className="search-bar-wrapper">
+    <div className="search-bar-wrapper" style={{width: '400px'}}>
       <input
         type="text"
         className="search-input"

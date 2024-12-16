@@ -1,87 +1,95 @@
-/* Card container for layout */
+/* card.css */
 .card-container {
-  display: inline-block;
-  width: 20%; /* Each card takes up 20% width */
-  box-sizing: border-box;
-  padding: 10px;
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+  
+   /* Centers the cards on the page */
 }
 
-/* Card styling */
 .card {
-  background-color: #f9fafb;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 260px; /* Increased card size */
+  padding: 15px;
+  /* border: 3px solid #e0e0e0; */
+  border-radius: 15px;
   overflow: hidden;
   text-align: center;
-  position: relative;
+  /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); */
+  background-color: #fff;
+  transition: transform 0.6s, box-shadow 0.3s;
 }
 
-/* Card image */
+.card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
 .card-image {
-  position: relative;
+  width: 100%;
+  height: 180px; /* Adjusted size for larger card */
   overflow: hidden;
+  position: relative;
+  border-radius: 10px;
 }
 
 .card-img {
   width: 100%;
-  border-radius: 8px;
-  transition: transform 0.5s ease; /* Smooth zoom effect */
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Hover overlay for button */
 .card-hover-overlay {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
-  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.5s ease;
+  text-align: center;
 }
 
 .card:hover .card-hover-overlay {
-  opacity: 1; /* Show overlay on hover */
+  display: flex;
 }
 
-.card:hover .card-img {
-  transform: scale(1.1); /* Zoom in image */
-}
-
-/* Button styling */
 .btn {
-  background-color: #0c0c19;
-  color: #fff;
+  background-color:#014D4E;
+  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s ease;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  transform: scale(1.1);
-  background-color: #1d4ed8; /* Change color on hover */
+  background-color: #014D4E; /* Slightly darker shade on hover */
 }
 
-/* Description and price */
 .card-info {
-  padding: 10px 0;
-  text-align: center;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  text-align: left;
 }
 
+.card-name,
+.card-quantity,
+.card-category,
 .card-price {
-  font-size: 1.2rem;
+  margin: 8px 0;
+  font-size: 16px;
   font-weight: bold;
-  margin: 5px 0;
-  color: #1d4ed8;
+  color: #014D4E;
 }
 
-.card-description {
-  font-size: 0.9rem;
-  color: #6b7280;
-  margin: 0;
+.card-name span,
+.card-quantity span,
+.card-category span,
+.card-price span {
+  font-weight: normal;
+  color: #555;
 }
